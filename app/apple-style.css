@@ -1,0 +1,156 @@
+/* 苹果风格UI样式 */
+@import url('https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@300;400;500;600&display=swap');
+
+:root {
+  --apple-bg: #ffffff;
+  --apple-text: #1d1d1f;
+  --apple-secondary-text: #86868b;
+  --apple-blue: #0071e3;
+  --apple-blue-hover: #0077ed;
+  --apple-border: #d2d2d7;
+  --apple-highlight: #f5f5f7;
+  --apple-error: #ff3b30;
+  --apple-success: #34c759;
+  --apple-shadow: rgba(0, 0, 0, 0.1);
+}
+
+body {
+  font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: var(--apple-bg);
+  color: var(--apple-text);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 500;
+}
+
+h1 {
+  font-size: 2.5rem;
+  letter-spacing: -0.025em;
+}
+
+h2 {
+  font-size: 2rem;
+  letter-spacing: -0.02em;
+}
+
+h3 {
+  font-size: 1.5rem;
+  letter-spacing: -0.015em;
+}
+
+p {
+  color: var(--apple-secondary-text);
+}
+
+button, .button {
+  background-color: var(--apple-blue);
+  color: white;
+  border-radius: 980px; /* 苹果风格的圆角按钮 */
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  border: none;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 8px var(--apple-shadow);
+}
+
+button:hover, .button:hover {
+  background-color: var(--apple-blue-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px var(--apple-shadow);
+}
+
+button:disabled, .button:disabled {
+  background-color: var(--apple-border);
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.card {
+  border-radius: 16px;
+  border: 1px solid var(--apple-border);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 16px var(--apple-shadow);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px var(--apple-shadow);
+}
+
+input, textarea, select {
+  border: 1px solid var(--apple-border);
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: var(--apple-blue);
+  box-shadow: 0 0 0 2px rgba(0, 113, 227, 0.2);
+}
+
+/* 拖放区域苹果风格 */
+.drop-zone {
+  border: 2px dashed var(--apple-border);
+  border-radius: 16px;
+  background-color: var(--apple-highlight);
+  transition: all 0.2s ease;
+}
+
+.drop-zone:hover, .drop-zone.active {
+  border-color: var(--apple-blue);
+  background-color: rgba(0, 113, 227, 0.05);
+}
+
+/* 加载动画苹果风格 */
+.spinner {
+  border: 2px solid rgba(0, 113, 227, 0.1);
+  border-radius: 50%;
+  border-top: 2px solid var(--apple-blue);
+  width: 20px;
+  height: 20px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* 容器和布局 */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.section {
+  margin-bottom: 3rem;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+  
+  h2 {
+    font-size: 1.75rem;
+  }
+  
+  h3 {
+    font-size: 1.25rem;
+  }
+  
+  .container {
+    padding: 1rem;
+  }
+}

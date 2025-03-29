@@ -1,0 +1,10 @@
+# https://aighiblifilter.org robots.txt
+User-agent: *
+Allow: /
+
+# 禁止爬取的路径
+Disallow: /api/
+Disallow: /_next/
+
+# Sitemap文件位置
+Sitemap: https://aighiblifilter.org/sitemap.xml 

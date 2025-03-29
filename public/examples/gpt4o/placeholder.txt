@@ -1,0 +1,5 @@
+这个文件夹需要包含以下图片：
+1. original_portrait.webp
+2. miyazaki_comparison.png
+
+请添加这些图片以便正确显示示例部分。 

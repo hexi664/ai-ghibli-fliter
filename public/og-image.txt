@@ -1,0 +1,2 @@
+Please replace this file with a 1200x630 pixel og-image.jpg image, which will serve as the preview image when shared on social media.
+The image should include the "AI Ghibli Filter" logo and examples of Ghibli-style transformed images to attract users to click. 
