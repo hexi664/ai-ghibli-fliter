@@ -64,23 +64,24 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <link rel="canonical" href="https://aighiblifilter.org" />
-      </head>
-      <body className="bg-white">
-        {children}
-        
-        {/* Google Analytics - Correctly implemented using Next.js Script component */}
+        {/* Google Analytics tracking code - placed in head according to Google requirements */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-KKLGQ9GGG9"
-          strategy="afterInteractive"
+          strategy="beforeInteractive"
         />
-        <Script id="google-analytics" strategy="afterInteractive">
+        <Script id="google-analytics" strategy="beforeInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'G-KKLGQ9GGG9');
+            gtag('config', 'G-KKLGQ9GGG9', {
+              page_path: window.location.pathname,
+            });
           `}
         </Script>
+      </head>
+      <body className="bg-white">
+        {children}
       </body>
     </html>
   )
