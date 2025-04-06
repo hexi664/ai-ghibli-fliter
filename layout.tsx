@@ -64,19 +64,17 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <link rel="canonical" href="https://aighiblifilter.org" />
-        {/* Google Analytics tracking code - placed in head according to Google requirements */}
+        {/* Google Analytics tracking code */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-KKLGQ9GGG9"
-          strategy="beforeInteractive"
+          strategy="afterInteractive"
         />
-        <Script id="google-analytics" strategy="beforeInteractive">
+        <Script id="google-analytics" strategy="afterInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'G-KKLGQ9GGG9', {
-              page_path: window.location.pathname,
-            });
+            gtag('config', 'G-KKLGQ9GGG9');
           `}
         </Script>
       </head>
